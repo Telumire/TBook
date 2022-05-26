@@ -1,0 +1,67 @@
+created: 20220526134024445
+modified: 20220526170510625
+tags: 
+title: PdfRender
+type: text/vnd.tiddlywiki
+
+<div class="no-print hide-when-ready">
+Create some dummy tiddlers :
+
+<$tiddler tiddler="Dummy tiddlers generator">
+<$transclude tiddler="Dummy tiddlers generator" mode="block"/>
+</$tiddler>
+
+Then click this icon to open an external window : {{||$:/core/ui/Buttons/open-window}}
+</div>
+
+<div class="no-print show-when-ready">
+Then click to print : {{$:/core/ui/Buttons/print}}
+</div>
+
+<div class="pdf-content show-when-ready">
+<$list filter="[subfilter{ExportFilter}]" counter="#">
+<article class="tw-page">
+<header class="tw-page-header">
+{{!!title}}
+</header>
+<$transclude mode="block">
+</$transclude>
+<footer class="tw-page-footer">
+<<#>>/<$count filter="[subfilter{ExportFilter}]"/>
+</footer>
+</article>
+<hr class="no-print"/>
+</$list>
+</div>
+<style>
+.show-when-ready, .tc-single-tiddler-window .hide-when-ready{
+display:none;
+}
+.tc-single-tiddler-window .show-when-ready{
+display:block;
+}
+@media print {
+  article.tw-page{
+page-break-after: always;
+position:relative;
+height:100%;
+margin:20px;
+}
+ .no-print{display:none!important;
+}
+.tw-page-header,.tw-page-footer{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+position:absolute;
+}
+.tw-page-header{
+bottom:auto;
+top:-10px;
+}
+.tw-page-footer{
+margin-top:auto;
+top:auto;
+}
+</style>

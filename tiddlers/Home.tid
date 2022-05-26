@@ -1,0 +1,19 @@
+created: 20220526170625509
+modified: 20220526171123201
+tags: 
+title: Home
+type: text/vnd.tiddlywiki
+
+!! PDF output
+
+{{PdfRender}}
+
+;Issues
+
+* Large tiddlers overflow over the next page
+* The footer is not stick to the bottom of the page
+* The header is cut out on some pages
+
+!! EPUB output
+
+TODO
