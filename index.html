@@ -166,7 +166,11 @@ Error message and password prompt
 
 <li>ExportFilter</li>
 
+<li>Github</li>
+
 <li>Home</li>
+
+<li>Interesting links on PDF generation</li>
 
 <li>PdfRender</li>
 
@@ -206,7 +210,11 @@ Error message and password prompt
 
 {"title":"ExportFilter","text":"[[Dummy]tagging[]]","type":"text/plain","created":"20220526161641573","modified":"20220526165307691","tags":"","revision":"0","bag":"default"},
 
+{"title":"Github","created":"20220526172831677","modified":"20220526172949066","tags":"$:/tags/SideBar","type":"text/vnd.tiddlywiki","text":"https://github.com/Telumire/TBook","revision":"0","bag":"default"},
+
 {"title":"Home","created":"20220526170625509","modified":"20220526171123201","tags":"","type":"text/vnd.tiddlywiki","text":"!! PDF output\n\n{{PdfRender}}\n\n;Issues\n\n* Large tiddlers overflow over the next page\n* The footer is not stick to the bottom of the page\n* The header is cut out on some pages\n\n!! EPUB output\n\nTODO","revision":"0","bag":"default"},
+
+{"title":"Interesting links on PDF generation","created":"20220526171955866","modified":"20220526172807824","tags":"","type":"text/vnd.tiddlywiki","text":"* https://github.com/cognitom/paper-css\n* https://www.w3.org/TR/mediaqueries-4/#update","revision":"0","bag":"default"},
 
 {"title":"PdfRender","created":"20220526134024445","modified":"20220526170510625","tags":"","type":"text/vnd.tiddlywiki","text":"\u003Cdiv class=\"no-print hide-when-ready\">\nCreate some dummy tiddlers :\n\n\u003C$tiddler tiddler=\"Dummy tiddlers generator\">\n\u003C$transclude tiddler=\"Dummy tiddlers generator\" mode=\"block\"/>\n\u003C/$tiddler>\n\nThen click this icon to open an external window : {{||$:/core/ui/Buttons/open-window}}\n\u003C/div>\n\n\u003Cdiv class=\"no-print show-when-ready\">\nThen click to print : {{$:/core/ui/Buttons/print}}\n\u003C/div>\n\n\u003Cdiv class=\"pdf-content show-when-ready\">\n\u003C$list filter=\"[subfilter{ExportFilter}]\" counter=\"#\">\n\u003Carticle class=\"tw-page\">\n\u003Cheader class=\"tw-page-header\">\n{{!!title}}\n\u003C/header>\n\u003C$transclude mode=\"block\">\n\u003C/$transclude>\n\u003Cfooter class=\"tw-page-footer\">\n\u003C\u003C#>>/\u003C$count filter=\"[subfilter{ExportFilter}]\"/>\n\u003C/footer>\n\u003C/article>\n\u003Chr class=\"no-print\"/>\n\u003C/$list>\n\u003C/div>\n\u003Cstyle>\n.show-when-ready, .tc-single-tiddler-window .hide-when-ready{\ndisplay:none;\n}\n.tc-single-tiddler-window .show-when-ready{\ndisplay:block;\n}\n@media print {\n  article.tw-page{\npage-break-after: always;\nposition:relative;\nheight:100%;\nmargin:20px;\n}\n .no-print{display:none!important;\n}\n.tw-page-header,.tw-page-footer{\ndisplay: flex;\nalign-items: center;\njustify-content: center;\nwidth: 100%;\nposition:absolute;\n}\n.tw-page-header{\nbottom:auto;\ntop:-10px;\n}\n.tw-page-footer{\nmargin-top:auto;\ntop:auto;\n}\n\u003C/style>","revision":"0","bag":"default"}
 ]</script><div id="storeArea" style="display:none;"></div>
